@@ -41,3 +41,6 @@ spec:
       options: "SUPERUSER"
       databases:
         - admin
+    - name: "service1"
+      databases:
+        - "service1"
