@@ -1,0 +1,43 @@
+apiVersion: postgres-operator.crunchydata.com/v1beta1
+kind: PostgresCluster
+metadata:
+  name: hercules-pgcluster
+spec:
+  users:
+    - name: postgres
+    - name: "contactdatafilter"
+      databases:
+        - "contactdatafilter"
+
+    - name: "contactdatapersistedstorage"
+      databases:
+        - "contactdatapersistedstorage"
+
+    - name: "emailvalidation"
+      databases:
+        - "emailvalidation"
+
+    - name: "identity"
+      databases:
+        - "identity"
+
+    - name: "permission"
+      databases:
+        - "permission"
+
+    - name: "replyusercontext"
+      databases:
+        - "replyusercontext"
+
+    - name: "contactdatasearch"
+      databases:
+        - "contactdatasearch"
+
+    - name: "gateway"
+      # options: "SUPERUSER"
+      databases:
+        - "gateway"
+    - name: "admin"
+      options: "SUPERUSER"
+      databases:
+        - admin
